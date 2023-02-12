@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="Biblioteka">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Korisnik">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Ime" type="xs:string"/>
+							<xs:element name="Prezime" type="xs:string"/>
+							<xs:element name="OIB" type="xs:integer"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Knjiga">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Naziv" type="xs:string"/>
+							<xs:element name="Autor" type="xs:string"/>
+							<xs:element name="ISBN" type="xs:integer"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Posudba">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ISBNKnjige" type="xs:integer"/>
+							<xs:element name="OIBKorisnika" type="xs:integer"/>
+							<xs:element name="DatumPosudbe" type="xs:date"/>
+							<xs:element name="DatumVracanja" type="xs:date"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Stanje">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Kolicina" type="xs:integer"/>
+							<xs:element name="ISBNKnjige" type="xs:integer"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
